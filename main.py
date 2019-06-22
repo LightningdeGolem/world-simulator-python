@@ -9,11 +9,15 @@ class Circle:
 		self.y = y
 
 		self.pendingForces = [0,0]
-		self.accel = [0,0]
 		self.speed = [0,0]
 
-	def update(self, x,y):
+	def update(self):
 		#Do stuff here to calculate the next x and y
+		self.speed[0] += self.speed[0]
+		self.speed[1] += self.speed[1]
+
+		self.x += speed[0]
+		self.y += speed[1]
 
 	def applyForce(self ,force)#'force' is Vector2D object
 		#Add a force to
